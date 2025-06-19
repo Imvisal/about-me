@@ -1,25 +1,106 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Header */
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.highlight {
+  color: #4CAF50;
+}
+.tagline {
+  font-style: italic;
+  color: #777;
+}
+
+/* Sections */
+.section {
+  margin-top: 30px;
+}
+.skills li {
+  margin: 6px 0;
+  background: #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Dark mode */
 .dark-mode {
-
   background-color: #121212;
-
   color: #e0e0e0;
-
 }
-
-.dark-mode header {
-
-  background-color: #1e1e1e;
-
-}
-
 .dark-mode .container {
-
-  background-color: #2c2c2c;
-
+  background: #1f1f1f;
+}
+.dark-mode a {
+  color: #80cbc4;
+}
+#darkModeBtn {
+  margin-top: 15px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
 }
 
-.dark-mode footer {
-
-  background-color: #1e1e1e;
-
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
 }
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  }
